@@ -28,6 +28,8 @@ public class TestaAluno {
         System.out.print("Nota 4: ");
         fulano.nota4 = leitor.nextInt();
 
+        double media = (fulano.nota1 + fulano.nota2 + fulano.nota3 + fulano.nota4)/4.0;
+
         System.out.println("\nDados do aluno: ");
         System.out.println("------------");
         System.out.println("Nome.....: " + fulano.nome);
@@ -37,5 +39,6 @@ public class TestaAluno {
         System.out.println("Nota 2...: " + fulano.nota2);
         System.out.println("Nota 3...: " + fulano.nota3);
         System.out.println("Nota 4...: " + fulano.nota4);
+        System.out.println("Média....: " + media);
     }
 }
