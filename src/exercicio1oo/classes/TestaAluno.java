@@ -1,11 +1,13 @@
 package exercicio1oo.classes;
 
-import java.util.Scanner;  ///include do C
+import java.util.Scanner;
+
+/// include do C
 
 public class TestaAluno {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
-        Aluno fulano =  new Aluno(); //criar objeto
+        Aluno fulano = new Aluno(); //criar objeto
 
         System.out.print("Nome: ");
         fulano.nome = leitor.nextLine(); /// ler string nextLine
@@ -28,7 +30,7 @@ public class TestaAluno {
         System.out.print("Nota 4: ");
         fulano.nota4 = leitor.nextInt();
 
-        double media = (fulano.nota1 + fulano.nota2 + fulano.nota3 + fulano.nota4)/4.0;
+        double media = (fulano.nota1 + fulano.nota2 + fulano.nota3 + fulano.nota4) / 4.0;
 
         System.out.println("\nDados do aluno: ");
         System.out.println("------------");

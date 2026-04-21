@@ -1,4 +1,5 @@
 package exercicio1oo.classes;
 
- class Circulo {
+class Circulo {
+
 }

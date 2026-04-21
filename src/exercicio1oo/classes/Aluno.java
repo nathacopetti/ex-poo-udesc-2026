@@ -1,6 +1,7 @@
 package exercicio1oo.classes;
 
- class Aluno { /// classes de dominio sem o "public"
+class Aluno {
+    /// classes de dominio sem o "public"
     String matricula;
     String nome;
     int idade;
