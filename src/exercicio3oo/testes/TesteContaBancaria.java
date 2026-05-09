@@ -1,6 +1,6 @@
-package exercicio2oo.testes;
+package exercicio3oo.testes;
 
-import exercicio2oo.classes.ContaBancaria;
+import exercicio3oo.classes.ContaBancaria;
 
 import java.util.Scanner;
 
@@ -10,18 +10,15 @@ public class TesteContaBancaria {
         ContaBancaria conta = new ContaBancaria();
 
         System.out.print("Número da Conta Báncaria: ");
-        conta.numeroConta = leitor.nextLine();
+        conta.setNumeroConta(leitor.nextLine());
 
         System.out.print("Nome do Titular: ");
-        conta.titular = leitor.nextLine();
+        conta.setTitular(leitor.nextLine());
 
         System.out.print("Saldo em Conta: ");
-        conta.saldo = leitor.nextDouble();
+        conta.setSaldo(leitor.nextDouble());
 
-        System.out.println("\nDados da Conta Bancária: ");
-        System.out.println("------------");
-        System.out.println("Número da Conta Bancária: " + conta.numeroConta);
-        System.out.println("Titular.................: " + conta.titular);
-        System.out.println("Saldo...................: R$" + conta.saldo);
+        System.out.printf("Número da Conta Bancária: %s - Nome do Titular: %s - Saldo em Conta: R$ %.2f", conta.getNumeroConta(),
+                conta.getTitular(), conta.getSaldo());
     }
 }

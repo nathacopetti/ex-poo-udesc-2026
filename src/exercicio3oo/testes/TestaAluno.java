@@ -1,48 +1,38 @@
-package exercicio2oo.testes;
+package exercicio3oo.testes;
 
-import exercicio2oo.classes.Aluno;
+import exercicio3oo.classes.Aluno;
 
 import java.util.Scanner;
 
-/// include do C
-
 public class TestaAluno {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         Aluno fulano = new Aluno(); //criar objeto
 
         System.out.print("Nome: ");
-        fulano.nome = leitor.nextLine(); // ler string nextLine
+        fulano.setNome(leitor.nextLine());
 
         System.out.print("Matricula: ");
-        fulano.matricula = leitor.nextLine(); // ler string nextLine
+        fulano.setMatricula(leitor.nextLine());
 
         System.out.print("Idade: ");
-        fulano.idade = leitor.nextInt(); // ler int
+        fulano.setIdade(leitor.nextInt());
 
         System.out.print("Nota 1: ");
-        fulano.nota1 = leitor.nextInt();
+        fulano.setNota1(leitor.nextInt());
 
         System.out.print("Nota 2: ");
-        fulano.nota2 = leitor.nextInt();
+        fulano.setNota2(leitor.nextInt());
 
         System.out.print("Nota 3: ");
-        fulano.nota3 = leitor.nextInt();
+        fulano.setNota3(leitor.nextInt());
 
         System.out.print("Nota 4: ");
-        fulano.nota4 = leitor.nextInt();
+        fulano.setNota4(leitor.nextInt());
 
-        double media = (fulano.nota1 + fulano.nota2 + fulano.nota3 + fulano.nota4) / 4.0;
+        double media = (fulano.getNota1() + fulano.getNota2() + fulano.getNota3() + fulano.getNota4()) / 4.0;
 
-        System.out.println("\nDados do aluno: ");
-        System.out.println("------------");
-        System.out.println("Nome.....: " + fulano.nome);
-        System.out.println("Matrícula: " + fulano.matricula);
-        System.out.println("Idade....: " + fulano.idade + " anos");
-        System.out.println("Nota 1...: " + fulano.nota1);
-        System.out.println("Nota 2...: " + fulano.nota2);
-        System.out.println("Nota 3...: " + fulano.nota3);
-        System.out.println("Nota 4...: " + fulano.nota4);
-        System.out.println("Média....: " + media);
+        System.out.printf("Nome: %s - Matrícula: %s - Idade: %d - Nota 1: %d - Nota 2: %d - Nota 3: %d - Nota 4: %d - Média: %.2f", fulano.getNome(), fulano.getMatricula(), fulano.getIdade(),
+                fulano.getNota1(), fulano.getNota2(), fulano.getNota3(), fulano.getNota4(), media);
     }
 }

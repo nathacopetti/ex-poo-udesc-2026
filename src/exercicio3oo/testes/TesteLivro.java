@@ -1,6 +1,6 @@
-package exercicio2oo.testes;
+package exercicio3oo.testes;
 
-import exercicio2oo.classes.Livro;
+import exercicio3oo.classes.Livro;
 
 import java.util.Scanner;
 
@@ -10,22 +10,18 @@ public class TesteLivro {
         Livro livro = new Livro();
 
         System.out.print("Titulo do Livro: ");
-        livro.titulo = leitor.nextLine();
+        livro.setTitulo(leitor.nextLine());
 
         System.out.print("Autor do Livro: ");
-        livro.autor = leitor.nextLine();
+        livro.setAutor(leitor.nextLine());
 
         System.out.print("Gênero do Livro: ");
-        livro.genero = leitor.nextLine();
+        livro.setGenero(leitor.nextLine());;
 
         System.out.print("Emprestado? Insira 'true' ou 'false': ");
-        livro.emprestado = leitor.nextBoolean();
+        livro.setEmprestado(leitor.nextBoolean());
 
-        System.out.println("\nDados do Livro: ");
-        System.out.println("------------");
-        System.out.println("Titulo do Livro.: " + livro.titulo);
-        System.out.println("Autor do Livro..: " + livro.autor);
-        System.out.println("Gênero do Livro.: " + livro.genero);
-        System.out.println("Livro Emprestado: " + livro.emprestado);
+        System.out.printf("Título do Livro: %s - Autor do Livro: %s - Gênero do Livro: %s - Emprestado? %b",
+                livro.getTitulo(), livro.getAutor(), livro.getGenero(), livro.getEmprestado());
     }
 }

@@ -1,31 +1,27 @@
-package exercicio2oo.testes;
+package exercicio3oo.testes;
 
-import exercicio2oo.classes.Carro;
+import exercicio3oo.classes.Carro;
 
 import java.util.Scanner;
 
 public class TestaCarro {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         Carro veiculo = new Carro();
 
         System.out.print("Modelo: ");
-        veiculo.modelo = leitor.nextLine();
+        veiculo.setModelo(leitor.nextLine());
 
         System.out.print("Marca: ");
-        veiculo.marca = leitor.nextLine();
+        veiculo.setMarca(leitor.nextLine());
 
         System.out.print("Ano: ");
-        veiculo.ano = leitor.nextInt();
+        veiculo.setAno(leitor.nextInt());
 
         System.out.print("Velocidade: ");
-        veiculo.velocidade = leitor.nextDouble();
+        veiculo.setVelocidade(leitor.nextDouble());
 
-        System.out.println("\nDados do Carro: ");
-        System.out.println("-----------");
-        System.out.println("Modelo....: " + veiculo.modelo);
-        System.out.println("Marca.....: " + veiculo.marca);
-        System.out.println("Ano.......: " + veiculo.ano);
-        System.out.println("Velocidade: " + veiculo.velocidade + "km");
+        System.out.printf("Modelo: %s - Marca: %s - Ano: %d - Velocidade: %.2f", veiculo.getModelo(), veiculo.getMarca(),
+                veiculo.getAno(), veiculo.getVelocidade());
     }
 }

@@ -1,6 +1,23 @@
-package exercicio2oo.classes;
+package exercicio3oo.classes;
 
 public class Retangulo {
-    public double largura;
-    public double altura;
+    private double largura;
+    private double altura;
+
+    public double getLargura() {
+        return this.largura;
+    }
+
+    public double getAltura() {
+        return this.altura;
+    }
+
+    public void setLargura(double largura) {
+        this.largura= largura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura= altura;
+    }
+
 }
